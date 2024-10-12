@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Queries</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="app.js" defer></script>
+</head>
+<body class="bg-gray-100 p-6">
+    <h1 class="text-2xl font-bold mb-4">Manage Search Queries</h1>
+
+    <div class="mb-6">
+        <h2 class="text-xl font-semibold">Add New Query</h2>
+        <form id="queryForm" class="bg-white p-4 rounded shadow">
+            <div class="mb-4">
+                <label for="mainQuery" class="block text-sm font-medium text-gray-700">Main Query:</label>
+                <input type="text" id="mainQuery" class="mt-1 block w-full border-gray-300 rounded-md" required>
+            </div>
+            <div class="mb-4">
+                <label for="relatedQueries" class="block text-sm font-medium text-gray-700">Related Queries (one per line):</label>
+                <textarea id="relatedQueries" class="mt-1 block w-full border-gray-300 rounded-md" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">Add Queries</button>
+        </form>
+    </div>
+
+    <div>
+        <h2 class="text-xl font-semibold mb-2">Current Queries</h2>
+        <table id="queryTable" class="min-w-full bg-white rounded shadow">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4 border-b">Query ID</th>
+                    <th class="py-2 px-4 border-b">Main Query</th>
+                    <th class="py-2 px-4 border-b">Related Queries</th>
+                </tr>
+            </thead>
+            <tbody id="queryBody">
+                <!-- Queries will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
